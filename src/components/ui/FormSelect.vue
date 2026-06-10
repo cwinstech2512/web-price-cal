@@ -3,7 +3,7 @@
     <label :for="id" class="text-sm font-medium text-stone-700">
       {{ label }} <span v-if="required" class="text-rose-500">*</span>
     </label>
-    <select 
+    <select
       :id="id"
       :value="modelValue"
       @change="$emit('update:modelValue', $event.target.value)"
@@ -27,7 +27,7 @@ defineProps({
   options: { type: Array, required: true },
   placeholder: { type: String, default: '請選擇' },
   disabled: { type: Boolean, default: false },
-  required: { type: Boolean, default: false }
+  required: { type: Boolean, default: false },
 })
 defineEmits(['update:modelValue'])
 </script>

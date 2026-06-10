@@ -3,8 +3,8 @@
     <label :for="id" class="text-sm font-medium text-stone-700">
       {{ label }} <span v-if="required" class="text-rose-500">*</span>
     </label>
-    <input 
-      :type="type" 
+    <input
+      :type="type"
       :id="id"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -22,7 +22,7 @@ defineProps({
   modelValue: { type: [String, Number], default: '' },
   type: { type: String, default: 'text' },
   placeholder: { type: String, default: '' },
-  required: { type: Boolean, default: false }
+  required: { type: Boolean, default: false },
 })
 defineEmits(['update:modelValue'])
 </script>
